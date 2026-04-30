@@ -13,6 +13,7 @@ try {
     $conn = new mysqli($host, $user, $pass, $dbname, $port);
     $conn->set_charset("utf8mb4");
 } catch (Exception $e) {
+    // It's helpful to keep the error message during development
     echo "Connection failed: " . $e->getMessage();
     exit;
 }
